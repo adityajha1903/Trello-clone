@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateBoardActivity"
+    android:background="@drawable/ic_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_board_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_board_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/main_color"
+        app:popupTheme="@style/AppTheme.PopUpOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout_board_activity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/proPicIV_board_activity"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:theme="@style/CircularImageView"
+            app:strokeColor="@color/white"
+            android:background="@drawable/ic_img_bg"
+            app:strokeWidth="2dp"
+            android:elevation="2.1dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="60dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginHorizontal="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="55dp">
+
+                <EditText
+                    android:id="@+id/board_name_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="32dp"
+                    android:hint="@string/board_name"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:text=""
+                    android:theme="@style/EditTextTheme"
+                    android:textColorHint="#737272"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="20dp" />
+
+                <Button
+                    android:id="@+id/create_board_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="@string/create"
+                    android:layout_marginTop="25dp"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/board_name_edit_text"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
